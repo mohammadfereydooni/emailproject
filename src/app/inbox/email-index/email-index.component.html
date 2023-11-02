@@ -1,0 +1,11 @@
+<div class="container">
+
+<mat-list *ngFor="let item of emails" class="email">
+  <mat-icon mat-list-icon>email</mat-icon>
+  <a mat-subheader [routerLink]="item.id" routerLinkActive="active" >{{item.subject}}</a>
+  <mat-list-item >{{item.id}}</mat-list-item>
+  <p mat-line class="demo-2"> {{item.from}} </p>
+  <mat-divider ></mat-divider>
+
+</mat-list>
+</div>

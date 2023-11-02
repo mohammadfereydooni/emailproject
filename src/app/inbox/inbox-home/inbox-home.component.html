@@ -1,0 +1,17 @@
+<mat-grid-list cols="4" rowHeight="100px">
+  <mat-grid-tile colspan="1" rowspan="2">1</mat-grid-tile>
+
+
+
+  <mat-grid-tile id="emailShow" colspan="3" rowspan="8">
+    <router-outlet></router-outlet>
+  </mat-grid-tile>
+
+
+
+  <mat-grid-tile id="inex" colspan="1" rowspan="6" style="background-color: rgba(0, 0, 0, 0.5);" >
+   <div class="emaillist">
+    <app-email-index></app-email-index>
+   </div>
+  </mat-grid-tile>
+</mat-grid-list>

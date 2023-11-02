@@ -1,0 +1,13 @@
+<div class="container">
+
+  <h1> Login   In email </h1>
+  <form [formGroup]="form" class="form" (submit)="signin()">
+
+    <app-input [control]="f.username" lable="username" type="text" placeholder="username" ></app-input>
+    <app-input [control]="f.password" lable="password" type="password" placeholder="password" ></app-input>
+
+
+    <button [disabled]="form.invalid" mat-button color="warn" class="button">Accent</button>
+
+  </form>
+  </div>

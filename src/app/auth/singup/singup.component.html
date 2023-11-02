@@ -1,0 +1,14 @@
+<div class="container">
+
+<h1> Crate an Account</h1>
+<form [formGroup]="form" class="form" (submit)="singup()">
+
+  <app-input [control]="f.username" lable="username" type="text" placeholder="username" ></app-input>
+  <app-input [control]="f.password" lable="password" type="password" placeholder="password" ></app-input>
+  <app-input [control]="f.passwordConfirmation" lable="passwordConfirmation" type="password" placeholder="passwordConfirmation" ></app-input>
+
+
+  <button [disabled]="form.invalid" mat-button color="warn" class="button">Accent</button>
+
+</form>
+</div>

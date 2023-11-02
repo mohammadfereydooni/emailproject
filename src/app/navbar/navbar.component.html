@@ -1,0 +1,35 @@
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+
+    <h1>{{username}}</h1>
+
+    <div>
+      <ng-container *ngIf="authService.sign$ |async;else signout">
+        <a  routerLink="/signout" routerLinkActive="active" >sing Out</a>
+        <a  routerLink="/inbox" routerLinkActive="active" >Inbox</a>
+      </ng-container>
+
+      <ng-template #signout>
+
+        <a  routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" >sing In</a>
+        <a  routerLink="/singup" routerLinkActive="active">sign up</a>
+
+      </ng-template>
+
+    </div>
+  </mat-toolbar>
+
+
+
+</p>

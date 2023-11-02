@@ -1,0 +1,11 @@
+
+
+<mat-form-field appearance="fill" class="input">
+  <mat-label>{{lable}}</mat-label>
+  <input class="fgdbd" ngClass="" [type]="type" matInput [formControl]="control" [placeholder]="placeholder">
+  <mat-error *ngIf="showErrors()">{{getErrorMessage()}}</mat-error>
+
+</mat-form-field>
+
+
+
