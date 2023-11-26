@@ -1,3 +1,4 @@
+import { ModalComponent } from './../shared/modal/modal.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -14,6 +15,11 @@ import {MatListModule} from '@angular/material/list';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { PlaceholderComponent } from './placeholder/placeholder.component';
 import {MatIconModule} from '@angular/material/icon';
+import { emailDetail } from '../model/email';
+import {MatDialogModule} from '@angular/material/dialog';
+import { SharedModule } from '../shared/shared.module';
+import {MatButtonModule} from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +38,10 @@ import {MatIconModule} from '@angular/material/icon';
     MatDividerModule,
     MatListModule,
     MatExpansionModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule,
+    SharedModule,
+    MatButtonModule
 
   ]
 })

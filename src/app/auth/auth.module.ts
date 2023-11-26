@@ -12,6 +12,7 @@ import { InputComponent } from '../shared/input/input.component';
 import { SharedModule } from '../shared/shared.module';
 import {HttpClientModule} from '@angular/common/http';
 import { SignoutComponent } from './signout/signout.component'
+import { ModalComponent } from '../shared/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SignoutComponent } from './signout/signout.component'
     MatSelectModule,
     MatFormFieldModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   exports:[]
 })

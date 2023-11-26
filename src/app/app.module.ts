@@ -13,10 +13,12 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthHttpInterceptor } from './Interceptor/auth-http.interceptor';
+import { NoteFoundComponent } from './note-found/note-found.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoteFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,7 @@ export class EmailIndexComponent implements OnInit {
 constructor(private http:HttpClient, private emailService:EmailService){}
 
   ngOnInit(): void {
-     this.emailService.getEmail().subscribe({
+     this.emailService.getEmails().subscribe({
       next:(data)=>{
         // console.log(data);
         this.emails = data;

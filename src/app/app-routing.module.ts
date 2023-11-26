@@ -6,12 +6,13 @@ import { AccessGuard } from './guard/access.guard';
 
 const routes: Routes = [
  {path:'inbox',
+ 
  canLoad:[AccessGuard],
  loadChildren:()=> import('./inbox/inbox.module').then(m => m.InboxModule)}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{useHash:true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

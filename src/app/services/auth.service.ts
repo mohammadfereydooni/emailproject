@@ -24,6 +24,8 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
+  userName!:string;
+
   usernameAvailable(username: string) {
     return this.http.post<any>(this.baseUrl + '/auth/username', {
       username: username,
@@ -42,6 +44,7 @@ export class AuthService {
     return this.http.get(`${this.baseUrl}/auth/signedin`).pipe(
       tap((response: any) => {
         this.sign$.next(response.authenticated);
+        this.userName = response.username
       })
     );
   }
@@ -58,8 +61,10 @@ export class AuthService {
     return this.http
       .post(`${this.baseUrl}/auth/signin/`, { username, password })
       .pipe(
-        tap(() => {
+        tap((res:any) => {
           this.sign$.next(true);
+          // this.userName= res.username;
+
         })
       );
   }

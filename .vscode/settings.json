@@ -1,0 +1,5 @@
+{
+    "editor.defaultFoldingRangeProvider": "GitHub.copilot",
+    "editor.defaultFormatter": "GitHub.copilot",
+    "github.copilot.editor.enableCodeActions": true
+}

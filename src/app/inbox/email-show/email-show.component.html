@@ -1,1 +1,11 @@
-<p>email-show works!</p>
+
+
+<div>
+
+  <h1> id: {{this.emails.id}}</h1>
+  <h2> from: {{this.emails.from}}</h2>
+  <h3> subject: {{this.emails.subject}}</h3>
+  <h4>{{this.emails.html}}</h4>
+  <button mat-raised-button color="primary" (click)="openDialog()">reply email</button>
+</div>
+

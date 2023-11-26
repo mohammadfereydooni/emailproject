@@ -1,0 +1,35 @@
+<h2 mat-dialog-title>{{header}}</h2>
+<mat-dialog-content class="mat-typography">
+<form action="" [formGroup]="sendEmail" (submit)="onSubmit()">
+
+  <mat-form-field appearance="outline">
+    <mat-label>to:</mat-label>
+    <input matInput placeholder="Placeholder" formControlName="to">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label> from:</mat-label>
+    <input matInput placeholder="Placeholder" formControlName="from">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>subject:</mat-label>
+    <input matInput placeholder="Placeholder" formControlName="subject">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Text:</mat-label>
+    <textarea matInput formControlName="text"></textarea>
+  </mat-form-field>
+
+
+
+
+
+</form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="onSubmit()">Send Email</button>
+</mat-dialog-actions>
+
